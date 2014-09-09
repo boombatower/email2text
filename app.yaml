@@ -1,0 +1,12 @@
+application: email2text
+version: live
+runtime: php
+api_version: 1
+
+handles:
+- url: /_ah/mail/.+
+  script: mail_receive.php
+  login: admin
+
+inbound_services:
+- mail
